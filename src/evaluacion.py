@@ -125,6 +125,31 @@ def evaluar(df, y_score, cfg, nombre="modelo", umbral=None):
     return resultado
 
 
+def construir_test_scored(test, scores, panel, extra_cols=("Age", "Gender")):
+    """Tabla ligera para el dashboard: identificadores + probabilidad/alerta de cada modelo.
+
+    El dashboard no necesita las 209 columnas de features (esas solo sirven para entrenar y
+    evaluar): con `pid`, `hosp`, `ICULOS`, la etiqueta real y la probabilidad/alerta de cada
+    modelo alcanza para graficar y filtrar, y el archivo pesa una fracción de la matriz
+    completa. El umbral de cada modelo es el mismo `panel` que ya se guarda en
+    `resultados_utility_umbral.csv` (presupuesto de alarma del 5%, sin mirar la etiqueta).
+    """
+    salida = test[["pid", "hosp", "ICULOS", "SepsisLabel", *extra_cols]].copy()
+    umbrales = panel.set_index("modelo")["umbral"]
+    for nombre, score in scores.items():
+        salida[f"proba_{nombre}"] = np.asarray(score, dtype="float32")
+        salida[f"alerta_{nombre}"] = (np.asarray(score) >= umbrales[nombre]).astype("int8")
+    return salida
+
+
+def guardar_test_scored(test_scored, cfg):
+    """Persiste la tabla puntuada en reports/dashboard/, donde el dashboard la lee directo."""
+    destino = cfg["rutas"]["dashboard"] / "test_scored.parquet"
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    test_scored.to_parquet(destino, index=False)
+    return destino
+
+
 def barrido_de_umbral(df, y_score, cfg, n_umbrales=40):
     """Recorre umbrales y devuelve la curva de utility, para elegirlo con criterio.
 

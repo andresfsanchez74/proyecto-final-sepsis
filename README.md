@@ -102,6 +102,11 @@ pip install -r requirements.txt
    ```
    (la ruta exacta es configurable en [`config/config.yaml`](config/config.yaml), sección `datos.hospitales`).
 
+3. Alternativa rápida sin descargar los 322 MB: [`data/sample/`](data/sample/README.md) trae
+   50 pacientes ya versionados en el repo, con la misma estructura de carpetas — apuntar
+   `rutas.raw` ahí corre el pipeline completo (notebooks y tests) para verificar que todo
+   funciona, aunque los resultados reportados en este README usan siempre el dataset completo.
+
 ### 5.4 Ejecutar el proyecto
 
 ```bash
@@ -117,6 +122,16 @@ mano en ningún notebook, el proyecto se resuelve solo desde donde se clone.
 Los notebooks 06, 06b, 07 y 08 dependen de los artefactos que guardan los anteriores
 (`data/processed/matriz_features_completa.parquet`, `models/*.joblib`, `models/*.pt`,
 `models/*.csv`) — si se ejecutan fuera de orden, van a fallar al no encontrarlos.
+
+### 5.5 Ejecutar los tests
+
+```bash
+pytest tests/
+```
+
+Cubren `src/utility.py`, `src/evaluacion.py` y `src/config.py` con datos sintéticos — no
+necesitan el dataset descargado, así que pueden correr justo después de `pip install -r
+requirements.txt`.
 
 ## 6. Metodología (CRISP-DM)
 
@@ -210,7 +225,9 @@ sépticos y no sépticos.
 ├── config/                 # Configuración central (rutas, semilla, parámetros del utility score)
 │   └── config.yaml
 ├── data/
+│   ├── README.md              # Qué carpetas hay y cómo poblarlas (ver sección 5.3)
 │   ├── raw/                 # Dataset completo (NO versionado; ver sección 5.3)
+│   ├── sample/                # 50 pacientes SÍ versionados, para correr el pipeline sin descargar todo
 │   ├── interim/              # Cohorte consolidada (no versionado, se regenera con el notebook 00)
 │   └── processed/            # Matriz de features lista para modelar (no versionado, notebook 05)
 ├── models/                 # Modelos entrenados y tablas de resultados (no versionado salvo los CSV)
@@ -226,8 +243,8 @@ sépticos y no sépticos.
 │   ├── 07_evaluacion_utility_umbral.ipynb # Utility score oficial y elección de umbral
 │   └── 08_interpretabilidad.ipynb         # SHAP, Yellowbrick, y por qué sepsis es difícil de predecir
 ├── reports/
-│   ├── figures/              # Gráficos exportados
-│   ├── dashboard/            # Insumos agregados (p. ej. importancia_shap.csv)
+│   ├── figures/              # Gráficos exportados (viz.guardar(), ver notebooks)
+│   ├── dashboard/            # Insumos para el dashboard: importancia_shap.csv, test_scored.parquet
 │   └── tables/                # Tablas comparativas exportadas
 ├── src/                     # Código reutilizable importado por los notebooks
 │   ├── config.py             # Carga de config.yaml y resolución de rutas absolutas
@@ -235,7 +252,13 @@ sépticos y no sépticos.
 │   ├── features.py           # Ingeniería de características, estrictamente causal
 │   ├── evaluacion.py         # Particiones sin fuga y métricas para un problema desbalanceado
 │   ├── utility.py            # Reimplementación del utility score oficial del challenge
-│   └── viz.py                # Estilo visual único del proyecto y gráficos reutilizados
+│   ├── viz.py                # Estilo visual único del proyecto y gráficos reutilizados
+│   └── serving.py            # Predicción sobre datos nuevos, para el simulador del dashboard
+├── tests/                   # Tests de src/ con datos sintéticos (pytest tests/, ver 5.5)
+│   ├── test_utility.py
+│   ├── test_evaluacion.py
+│   ├── test_config.py
+│   └── test_serving.py        # Se salta si no hay modelo entrenado localmente (models/*.joblib)
 ├── requirements.txt
 ├── .gitignore
 └── README.md

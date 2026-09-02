@@ -23,3 +23,6 @@ torch>=2.2
 pyyaml>=6.0            # lectura de config/config.yaml
 tqdm>=4.66             # barra de progreso al consolidar 40.336 archivos
 jupyter>=1.0
+
+# Tests
+pytest>=8.0             # tests/ — no requieren el dataset descargado

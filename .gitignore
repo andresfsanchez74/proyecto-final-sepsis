@@ -21,6 +21,9 @@ __pycache__/
 # --- Jupyter ---
 .ipynb_checkpoints/
 
+# --- Tests ---
+.pytest_cache/
+
 # --- CatBoost (carpeta de logs auto-generada al entrenar, notebook 06) ---
 notebooks/catboost_info/
 
