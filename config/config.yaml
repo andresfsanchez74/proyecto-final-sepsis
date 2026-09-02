@@ -1,0 +1,52 @@
+# Configuración central del proyecto.
+# Todo parámetro que un notebook necesite ajustar vive aquí, no hardcodeado en las celdas:
+# así un cambio de ventana o de umbral se propaga a todo el pipeline sin editar 9 notebooks.
+
+proyecto:
+  nombre: "Predicción temprana de sepsis en UCI"
+  semilla: 42
+
+rutas:
+  raw: "data/raw/sepsis_dataset"
+  interim: "data/interim"
+  processed: "data/processed"
+  models: "models"
+  figures: "reports/figures"
+  dashboard: "reports/dashboard"
+
+datos:
+  # Los .psv del challenge vienen en carpetas anidadas: training_setX/training_setX/*.psv
+  hospitales:
+    A: "training_setA/training_setA"
+    B: "training_setB/training_setB"
+  archivo_cohorte: "cohorte_horaria.parquet"
+
+  # Columnas administrativas/demográficas: no son mediciones clínicas y no se les
+  # aplica ingeniería temporal (Age y Gender son constantes por paciente).
+  cols_demograficas: ["Age", "Gender", "Unit1", "Unit2", "HospAdmTime"]
+  col_tiempo: "ICULOS"
+  col_target: "SepsisLabel"
+  col_paciente: "pid"
+  col_hospital: "hosp"
+
+features:
+  ventanas_horas: [6, 24]          # ventanas rodantes para min/max/media/std/pendiente
+  horas_basal: 6                   # nº de horas iniciales que definen el "basal" del paciente
+  max_horas_ffill: 24              # antigüedad máxima aceptada al arrastrar un valor hacia adelante
+
+# Parámetros oficiales del utility score del PhysioNet Challenge 2019
+# (verificados contra evaluate_sepsis_score.py del repositorio oficial, no de memoria).
+utility:
+  dt_early: -12      # antes de esto, predecir no da recompensa
+  dt_optimal: -6     # recompensa máxima: 6 h antes del inicio de sepsis
+  dt_late: 3         # después de esto, ya no se penaliza ni premia
+  max_u_tp: 1
+  min_u_fn: -2
+  u_fp: -0.05
+  u_tn: 0
+
+evaluacion:
+  test_size_pacientes: 0.2
+  n_splits_cv: 5
+  # Tasa de alarmas clínicamente tolerable, para reportar sensibilidad a carga fija
+  tasa_alarma_objetivo: 0.05

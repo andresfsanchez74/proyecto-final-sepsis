@@ -1,0 +1,35 @@
+# --- Datos ---
+# El dataset crudo pesa 322 MB (40.336 archivos .psv) y GitHub limita a 100 MB por archivo.
+# No se versiona: el README documenta cómo descargarlo y 00_carga_consolidacion.ipynb lo reconstruye.
+data/raw/
+data/interim/
+data/processed/
+
+# --- Modelos entrenados ---
+# Binarios pesados y regenerables desde los notebooks.
+models/*.pkl
+models/*.joblib
+models/*.pt
+!models/.gitkeep
+
+# --- Entorno ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- CatBoost (carpeta de logs auto-generada al entrenar, notebook 06) ---
+notebooks/catboost_info/
+
+# --- Sistema operativo / editores ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Power BI ---
+# El .pbix se entrega aparte; los CSV que lo alimentan sí se versionan (son livianos y agregados).
+*.pbix

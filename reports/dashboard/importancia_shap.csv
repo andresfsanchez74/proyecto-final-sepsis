@@ -1,0 +1,210 @@
+feature,shap_medio_abs,familia
+ICULOS,0.46411359612539116,Contexto administrativo
+FiO2_ult,0.27267784066514394,Estado fisiológico
+HospAdmTime,0.16922286028183703,Contexto administrativo
+Unit2,0.15155466095310163,Contexto administrativo
+Lactate_edad,0.11533653098655026,Práctica de medición
+FiO2_edad,0.11318628702840365,Práctica de medición
+Temp_max_6h,0.1111332967630827,Estado fisiológico
+Resp_media_24h,0.10364174332717412,Estado fisiológico
+horas_en_hospital,0.09706929743572511,Contexto administrativo
+BUN_ult,0.0968807604208096,Estado fisiológico
+WBC_ult,0.09419988775750278,Estado fisiológico
+n_labs_6h,0.08093443817130991,Práctica de medición
+Temp_ult,0.06947601024724678,Estado fisiológico
+Creatinine_ult,0.06545416892554302,Estado fisiológico
+n_vitales_24h,0.05137841857148513,Práctica de medición
+Platelets_ult,0.05114261662999419,Estado fisiológico
+MAP_min_6h,0.05067690720973285,Estado fisiológico
+SBP_min_6h,0.04739145669310782,Estado fisiológico
+Alkalinephos_edad,0.043531334535639184,Práctica de medición
+HR_max_6h,0.04321738944903744,Estado fisiológico
+HCO3_ult,0.042496809678042376,Estado fisiológico
+Bilirubin_total_edad,0.040035235876457353,Práctica de medición
+PaCO2_ult,0.03957372220257483,Estado fisiológico
+EtCO2_medido,0.039454836663921855,Práctica de medición
+HR_ult,0.03598819461025052,Estado fisiológico
+Temp_max_24h,0.03541216453550904,Estado fisiológico
+HR_media_24h,0.033560473785624156,Estado fisiológico
+Hgb_ult,0.031428321391049764,Estado fisiológico
+Alkalinephos_ult,0.030993576072384343,Estado fisiológico
+HR_delta_basal,0.03087127082607744,Estado fisiológico
+SBP_media_24h,0.029485447109936537,Estado fisiológico
+SBP_pend_6h,0.02899508845670674,Estado fisiológico
+PTT_ult,0.02788516289372257,Estado fisiológico
+O2Sat_min_6h,0.027748738170631934,Estado fisiológico
+HR_pend_6h,0.026829791710283376,Estado fisiológico
+n_vitales_6h,0.025954527444146867,Práctica de medición
+Resp_min_24h,0.025928658424782952,Estado fisiológico
+AST_edad,0.025555064629812444,Práctica de medición
+Temp_media_6h,0.02340381692118714,Estado fisiológico
+Lactate_ult,0.022480529193151216,Estado fisiológico
+sirs_total,0.022029683618781944,Estado fisiológico
+DBP_media_6h,0.021898252523873864,Estado fisiológico
+SBP_std_6h,0.02094175990454079,Estado fisiológico
+SBP_delta_basal,0.02088794100940108,Estado fisiológico
+O2Sat_std_6h,0.020791871867308832,Estado fisiológico
+MAP_media_24h,0.020776152701579377,Estado fisiológico
+Age,0.0206277718260179,Contexto administrativo
+Chloride_ult,0.019787068442462405,Estado fisiológico
+Potassium_ult,0.019710011445708518,Estado fisiológico
+Temp_media_24h,0.019221866317053162,Estado fisiológico
+Hct_ult,0.018808917720604074,Estado fisiológico
+DBP_pend_6h,0.018473265958817906,Estado fisiológico
+Resp_media_6h,0.017933918619340277,Estado fisiológico
+ratio_bun_creat,0.01688071011808086,Estado fisiológico
+Potassium_edad,0.015713022079651952,Práctica de medición
+MAP_pend_24h,0.015705660372417062,Estado fisiológico
+O2Sat_media_24h,0.015510770002735859,Estado fisiológico
+Bilirubin_total_ult,0.015168767278888967,Estado fisiológico
+DBP_ult,0.015082662328525271,Estado fisiológico
+pH_ult,0.014807054139248274,Estado fisiológico
+pH_edad,0.014758758416790144,Práctica de medición
+Calcium_edad,0.014654072747591548,Práctica de medición
+Unit1,0.014156418014261147,Contexto administrativo
+EtCO2_std_6h,0.014137385096912083,Estado fisiológico
+PaCO2_edad,0.013179670999817336,Práctica de medición
+O2Sat_std_24h,0.012972993286293595,Estado fisiológico
+SaO2_ult,0.012852192618969084,Estado fisiológico
+O2Sat_min_24h,0.012395477882565642,Estado fisiológico
+n_labs_hora,0.012267210803524251,Práctica de medición
+MAP_max_24h,0.01220723547903755,Estado fisiológico
+HR_media_6h,0.012145142832337722,Estado fisiológico
+hipotension,0.012091433494998432,Estado fisiológico
+SBP_ult,0.012053798813775904,Estado fisiológico
+DBP_media_24h,0.012047710966372879,Estado fisiológico
+Temp_pend_6h,0.011313716885880539,Estado fisiológico
+Resp_std_24h,0.011146719614242531,Estado fisiológico
+Glucose_ult,0.010735137296067067,Estado fisiológico
+DBP_min_6h,0.010543966142798952,Estado fisiológico
+HR_max_24h,0.010237113404581893,Estado fisiológico
+SBP_max_6h,0.010134766918921062,Estado fisiológico
+Lactate_medido,0.010103617543219388,Práctica de medición
+Temp_pend_24h,0.010002352994897953,Estado fisiológico
+Glucose_edad,0.009834747680929972,Práctica de medición
+DBP_max_24h,0.009694800625832266,Estado fisiológico
+Hgb_edad,0.009398401898875532,Práctica de medición
+HR_min_6h,0.00903097080286516,Estado fisiológico
+MAP_min_24h,0.009011224111109222,Estado fisiológico
+EtCO2_max_24h,0.008857062429175623,Estado fisiológico
+Resp_max_24h,0.00862690226673251,Estado fisiológico
+SBP_min_24h,0.008444911260799957,Estado fisiológico
+SaO2_edad,0.008388779770834794,Práctica de medición
+MAP_media_6h,0.008115429615222425,Estado fisiológico
+AST_ult,0.007962635074788544,Estado fisiológico
+BaseExcess_ult,0.00793703143816894,Estado fisiológico
+Resp_min_6h,0.007767742510677712,Estado fisiológico
+SBP_max_24h,0.00748098568258968,Estado fisiológico
+Resp_std_6h,0.0072500014372361265,Estado fisiológico
+TroponinI_ult,0.007206908407595999,Estado fisiológico
+HCO3_edad,0.007041376281987701,Práctica de medición
+DBP_min_24h,0.006671413575296741,Estado fisiológico
+HR_pend_24h,0.006284365458097143,Estado fisiológico
+n_labs_24h,0.006194154021728545,Práctica de medición
+Phosphate_ult,0.006099637279297844,Estado fisiológico
+DBP_max_6h,0.005971883416686895,Estado fisiológico
+Temp_edad,0.005943519648060808,Práctica de medición
+Resp_edad,0.005850051388542237,Práctica de medición
+Phosphate_edad,0.005807227022482752,Práctica de medición
+Fibrinogen_ult,0.005751611949644196,Estado fisiológico
+MAP_std_24h,0.005619412694378883,Estado fisiológico
+Resp_pend_6h,0.0055760789226369425,Estado fisiológico
+Temp_medido,0.005323651845240347,Práctica de medición
+DBP_std_24h,0.005322234833684605,Estado fisiológico
+Hct_edad,0.004830188306852717,Práctica de medición
+MAP_ult,0.004772087229814068,Estado fisiológico
+HR_std_6h,0.004648480243898169,Estado fisiológico
+SBP_std_24h,0.004623747848513088,Estado fisiológico
+Resp_max_6h,0.00449973739692792,Estado fisiológico
+HR_edad,0.004453941857370489,Práctica de medición
+MAP_max_6h,0.004192226709426204,Estado fisiológico
+SBP_media_6h,0.00409846482465083,Estado fisiológico
+Calcium_ult,0.004066714997762055,Estado fisiológico
+MAP_std_6h,0.0040594017805063954,Estado fisiológico
+DBP_edad,0.004042024272631599,Práctica de medición
+HR_min_24h,0.0040127478258978585,Estado fisiológico
+O2Sat_pend_24h,0.003993978022020449,Estado fisiológico
+EtCO2_media_24h,0.003966593798999019,Estado fisiológico
+EtCO2_ult,0.003949870566390788,Estado fisiológico
+Resp_pend_24h,0.0039012496190106703,Estado fisiológico
+SBP_edad,0.0038376897753994044,Práctica de medición
+Chloride_edad,0.003554942333399531,Práctica de medición
+DBP_pend_24h,0.0033595921632253016,Estado fisiológico
+Fibrinogen_edad,0.0031862004747634843,Práctica de medición
+Magnesium_edad,0.00291361677785281,Práctica de medición
+O2Sat_media_6h,0.0028219132196764126,Estado fisiológico
+DBP_std_6h,0.0024528274296642828,Estado fisiológico
+O2Sat_max_24h,0.0023346766287191505,Estado fisiológico
+EtCO2_min_24h,0.002248563661443168,Estado fisiológico
+Hgb_medido,0.0022260188380294915,Práctica de medición
+Temp_delta_basal,0.0021504884292431066,Estado fisiológico
+EtCO2_max_6h,0.0021061978336847716,Estado fisiológico
+Temp_min_6h,0.0020971156547647985,Estado fisiológico
+indice_shock,0.0018345442488296342,Estado fisiológico
+EtCO2_std_24h,0.0014293665527219351,Estado fisiológico
+O2Sat_delta_basal,0.0010571046550055503,Estado fisiológico
+Bilirubin_total_medido,0.0008347413727097875,Práctica de medición
+Resp_medido,0.0,Práctica de medición
+DBP_medido,0.0,Práctica de medición
+MAP_medido,0.0,Práctica de medición
+SBP_medido,0.0,Práctica de medición
+O2Sat_medido,0.0,Práctica de medición
+HR_medido,0.0,Práctica de medición
+Platelets_edad,0.0,Práctica de medición
+WBC_edad,0.0,Práctica de medición
+PTT_edad,0.0,Práctica de medición
+TroponinI_edad,0.0,Práctica de medición
+Magnesium_ult,0.0,Estado fisiológico
+Resp_ult,0.0,Estado fisiológico
+BUN_edad,0.0,Práctica de medición
+Creatinine_edad,0.0,Práctica de medición
+Bilirubin_direct_ult,0.0,Estado fisiológico
+Bilirubin_direct_edad,0.0,Práctica de medición
+BaseExcess_edad,0.0,Práctica de medición
+EtCO2_edad,0.0,Práctica de medición
+O2Sat_edad,0.0,Práctica de medición
+MAP_edad,0.0,Práctica de medición
+O2Sat_ult,0.0,Estado fisiológico
+Gender,0.0,Contexto administrativo
+Creatinine_medido,0.0,Práctica de medición
+Chloride_medido,0.0,Práctica de medición
+PTT_medido,0.0,Práctica de medición
+Hct_medido,0.0,Práctica de medición
+TroponinI_medido,0.0,Práctica de medición
+Potassium_medido,0.0,Práctica de medición
+Platelets_medido,0.0,Práctica de medición
+Fibrinogen_medido,0.0,Práctica de medición
+WBC_medido,0.0,Práctica de medición
+n_vitales_hora,0.0,Práctica de medición
+MAP_pend_6h,0.0,Estado fisiológico
+O2Sat_max_6h,0.0,Estado fisiológico
+O2Sat_pend_6h,0.0,Estado fisiológico
+Temp_std_6h,0.0,Estado fisiológico
+Alkalinephos_medido,0.0,Práctica de medición
+Calcium_medido,0.0,Práctica de medición
+Phosphate_medido,0.0,Práctica de medición
+Magnesium_medido,0.0,Práctica de medición
+AST_medido,0.0,Práctica de medición
+BUN_medido,0.0,Práctica de medición
+HCO3_medido,0.0,Práctica de medición
+BaseExcess_medido,0.0,Práctica de medición
+pH_medido,0.0,Práctica de medición
+PaCO2_medido,0.0,Práctica de medición
+SaO2_medido,0.0,Práctica de medición
+FiO2_medido,0.0,Práctica de medición
+Glucose_medido,0.0,Práctica de medición
+Bilirubin_direct_medido,0.0,Práctica de medición
+Temp_min_24h,0.0,Estado fisiológico
+Temp_std_24h,0.0,Estado fisiológico
+EtCO2_min_6h,0.0,Estado fisiológico
+EtCO2_media_6h,0.0,Estado fisiológico
+HR_std_24h,0.0,Estado fisiológico
+EtCO2_pend_6h,0.0,Estado fisiológico
+SBP_pend_24h,0.0,Estado fisiológico
+DBP_delta_basal,0.0,Estado fisiológico
+MAP_delta_basal,0.0,Estado fisiológico
+EtCO2_pend_24h,0.0,Estado fisiológico
+Resp_delta_basal,0.0,Estado fisiológico
+EtCO2_delta_basal,0.0,Estado fisiológico
+qsofa_parcial,0.0,Estado fisiológico
+presion_pulso,0.0,Estado fisiológico
