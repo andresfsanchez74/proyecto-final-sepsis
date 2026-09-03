@@ -19,6 +19,10 @@ shap>=0.44             # interpretabilidad de los modelos de árboles
 # Modelo secuencial (notebook 06b)
 torch>=2.2
 
+# Dashboard interactivo (app/)
+streamlit>=1.60
+plotly>=5.20
+
 # Utilidades
 pyyaml>=6.0            # lectura de config/config.yaml
 tqdm>=4.66             # barra de progreso al consolidar 40.336 archivos
